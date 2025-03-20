@@ -13,7 +13,7 @@ where
 - _A_ indicates whether the surrogate endpoint dataset is Normally distributed. It has two options: **Normal** (for Normally distributed), and **XNormal** (for non-Normally distributed).
 - _B_ describes the ranges of the datasets for the control and treatment arms of the surrogate endpoint. It has two options: **Overlap** (the two ranges mostly overlap), and **Subset** (the range of the control arm data is mostly contained within the range of the treatment arm data).
 - _C_ indicates the average sample size between the control and treatment arms. It has two options: **200**, and **1000**.
-- _D_ indicates the 
+- _D_ indicates the data-generating mechanism considered, according to the values of RM and RS (see Tables 2.1 to 2.4 of my thesis). It has seven options: **LL**, **LM**, **ML**, **MM**, **MH**, **HM**, and **HH**. For instance, **ML** is the data-generating mechanism where RM is Medium (0.3-0.7) and RS is Low (<0.3), and **HH** is the data-generating mechanism where both RM and RS are High (>0.7).
 - _E_ indicates the allocation ratio. It has two options: **1**, and **3**.
 
 To illustrate this notation, the setting **XNormalSubset1000HM3** would indicate the following:
@@ -46,8 +46,8 @@ This code contains all combinations of **NormalOverlap[_C_][_D_][_E_]**. The cod
 
 - **NonNormalSubsetted.R**
 
-This code contains all combinations of **XNormalSubset[_C_][_D_][_E_]**. The code for each combination is analogous to rspmsillustration.R, so the comments are mostly removed.
+This code contains all combinations of **XNormalSubset[_C_][_D_][_E_]**, except the LM DGM which was not simulated. The code for each combination is analogous to rspmsillustration.R, so the comments are mostly removed.
 
 - **NonNormalOverlapping.R**
 
-This code contains all combinations of **XNormalOverlap[_C_][_D_][_E_]**. The code for each combination is analogous to rspmsillustration.R, so the comments are mostly removed.
+This code contains all combinations of **XNormalOverlap[_C_][_D_][_E_]**, except the LM DGM which was not simulated. The code for each combination is analogous to rspmsillustration.R, so the comments are mostly removed.
