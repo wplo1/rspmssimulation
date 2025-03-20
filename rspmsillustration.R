@@ -1,13 +1,13 @@
 library(Surrogate)
 library(doParallel); library(foreach)
 
-# Function of resdata (vector of estimates, variances and extrapolation proportions described in resdf function below in line 64),
+# Function of resdata (vector of estimates, variances and extrapolation proportions described in resdf function below in line 72),
 #             truers (true value of RS) and truepms (true value of PMS)
 # Function generates table of performance measures (bias, empirical SE, MSE, average model SE, coverage) for each of RS and PMS with associated Monte Carlo SEs, 
 # as well as median extrapolation proportions of TC and CT (not their perturbed versions) with interquartile ranges (IQRs) as final column
 finalperf <- function(resdata,truers,truepms){
   resdf.df <- data.frame()
-  # The 2nd-13th columns (total of 12 columns) of resdf.df below correspond to the vector of 12 elements of resdf (defined below in line 64)
+  # The 2nd-13th columns (total of 12 columns) of resdf.df below correspond to the vector of 12 elements of resdf (defined below in line 72)
   # This will be a dataframe, as the resdf function will be applied to each of the 625 simulations
   for(i in 1:nrow(resdata)){resdf.df<-rbind(resdf.df, resdata[i,]$resulX)}
   # Converting to a numerical environment
