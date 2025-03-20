@@ -26,11 +26,28 @@ To illustrate this notation, the setting **XNormalSubset1000HM3** would indicate
 
 The third and fifth items mean that the sample size of the treatment arm of the surrogate endpoint is 1500, and the sample size of the control arm of the surrogate endpoint is 500.
 
+**Files**
+
 The first file (rspmsillustration.R) is 
 
 - **rspmsillustration.R**
   
-Code runs simulations for the data-generating mechanism where both RM and RS (as defined in Proposition 2.3) are low, in the case of a Normal surrogate endpoint and linear logit link for true endpoint, such that the range of surrogate values in the control arm lies within the range of surrogate values in the treatment arm (subsetted supports), under equal allocation (r=1) and a sample size of 200 per arm (total sample size 400).
+As this is an illustration, extensive comments (#) to the code are provided. This code runs simulations in the case **NormalSubset200LL1**; that is, for the data-generating mechanism where both RM and RS (as defined in Proposition 2.3) are low (hence denoted **LL**), in the case of a Normal surrogate endpoint such that the range of surrogate values in the control arm lies within the range of surrogate values in the treatment arm (subsetted supports), under equal allocation (r=1) and a sample size of 200 per arm (total sample size 400).
 
 The results correspond to the first two rows of Table 2.8 (point estimates of performance measures) and the first two rows of Table B.4 (Monte Carlo standard errors of performance measures; Appendix B) in my thesis.
 
+- **NormalSubsetted.R**
+
+This code contains all combinations of **NormalSubset[_C_][_D_][_E_]**. The code for each combination is analogous to rspmsillustration.R, so the comments are mostly removed.
+
+- **NormalOverlapping.R**
+
+This code contains all combinations of **NormalOverlap[_C_][_D_][_E_]**. The code for each combination is analogous to rspmsillustration.R, so the comments are mostly removed.
+
+- **NonNormalSubsetted.R**
+
+This code contains all combinations of **XNormalSubset[_C_][_D_][_E_]**. The code for each combination is analogous to rspmsillustration.R, so the comments are mostly removed.
+
+- **NonNormalOverlapping.R**
+
+This code contains all combinations of **XNormalOverlap[_C_][_D_][_E_]**. The code for each combination is analogous to rspmsillustration.R, so the comments are mostly removed.
