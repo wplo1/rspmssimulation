@@ -21,7 +21,7 @@ To illustrate this notation, the setting **XNormalSubset1000HM3** would indicate
 - the surrogate endpoint is non-Normally distributed;
 - the range of the control arm of the surrogate endpoint data is mostly contained within the range of the treatment arm of the surrogate endpoint data;
 - the average sample size between the two arms is 1000;
-- the data-generating mechanism is HM,, and
+- the data-generating mechanism is HM, and
 - the allocation ratio is r=3,
 
 The third and fifth items mean that the sample size of the treatment arm of the surrogate endpoint is 1500, and the sample size of the control arm of the surrogate endpoint is 500.
